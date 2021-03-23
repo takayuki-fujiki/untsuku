@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Un-tsuku!!</title>
+    <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <div class="wrapper">
+    <div class="header">
+      <%= render "shared/header" %>
+    </div>
+    <div class="main">
+      <% @post.each do |post| %>
+      <div class="post">
+        <div class="user">
+          <div class="user-icon">
+            <%= post.user_id %>
+          </div>
+          <div class="user-name">
+            <%= post.user.nickname %>
+          </div>
+        </div>
+        <div class="postandcomment">
+          <div class="post-detail">
+            <%= post.execercisedate %>
+            <%= post.execercise1 %>回
+          </div>
+        <div class="comment">
+            <%= post.post %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  </body>
+</html>

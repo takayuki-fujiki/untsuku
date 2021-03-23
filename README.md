@@ -1,24 +1,48 @@
-# README
+# テーブル設計
+## usersテーブル
+| Column             | Type    | Options                   |
+| ------------------ | ------- | ------------------------- |
+| nickname           | string  | null: false               |
+| email              | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+- has_many :posts
+- has_many :comments
 
-Things you may want to cover:
+## postsテーブル
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| date                | date       | null: false                    |
+| post                | text       |                                |
+| execercise1         | integer    | null: false                    |
+| execercise2         | integer    | null: false                    |
+| execercise3         | integer    | null: false                    |
+| execercise4         | integer    | null: false                    |
+| execercise5         | integer    | null: false                    |
+| user                | references | null:false, foreign_keys: true |
 
-* Ruby version
+### Association
+belongs_to :user
+has_many :comments
 
-* System dependencies
+## commentsテーブル
+| Column      | Type       | Options                         |
+| ----------- | ---------- | ------------------------------- |
+| comment     | text       | null: false, foreign_keys: true |
+| post        | references | null: false, foreign_keys: true |
+| user        | references | null: false, foreign_keys: true |
 
-* Configuration
+### Association
+belongs_to :user
+belongs_to :post
 
-* Database creation
+## relationsテーブル
+| Column  | Type       | Options                         |
+| ------- | ---------- | ------------------------------- |
+| user    | references | null: false, foreign_keys: true |
+| follow  | references | 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Association
+belongs_to :user
+belongs_to :follow, class_name: user

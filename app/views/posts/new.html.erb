@@ -1,0 +1,11 @@
+<%= form_with(model: @post, local: true) do |form| %>
+  <%= form.text_field :execercisedate, placeholder: "運動した日付を入力 yyyymmdd" %><br>
+  <%= form.text_area :post, placeholder: "コメントを入力しよう" %><br>
+  筋トレ1 <%= form.text_field :execercise1, placeholder: "何回運動したか入力しよう" %>回<br>
+  筋トレ2 <%= form.text_field :execercise2, placeholder: "何回運動したか入力しよう" %>回<br>
+  筋トレ3 <%= form.text_field :execercise3, placeholder: "何回運動したか入力しよう" %>回<br>
+  筋トレ4 <%= form.text_field :execercise4, placeholder: "何回運動したか入力しよう" %>回<br>
+  筋トレ5 <%= form.text_field :execercise5, placeholder: "何回運動したか入力しよう" %>回<br>
+  <%= form.submit "うんした！" %>
+  <%= link_to "Back to Top", root_path %>
+<% end %>

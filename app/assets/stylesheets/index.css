@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.main{
+  margin-top: 10px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.header{
+  margin-left: 200px;
+  margin-right: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  }
+
+.username_header{
+  width: 300px;
+  border:darkolivegreen 1px solid;
+}
+
+.login_out{
+  width: 300px;
+  border-radius: 10px;
+  background-color: darkorange;
+  color: white;
+  text-align:center;
+  line-height:85px;
+  font-size: 40px;
+  border:darkblue 1px;
+
+}
+
+.post_registration{
+  width: 300px;
+  border-radius: 10px;
+  text-align:center;
+  background-color: darkorange;
+  color: white;
+  text-align:center;
+  line-height:85px;
+  font-size: 40px;
+  border:darkgoldenrod 1px;
+}
+
+.post{
+  margin-top: 10px;
+  border-radius: 10px;
+  border: solid 1px red;
+  display: flex;
+}
+
+.user{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 100px;
+  background-color: crimson;
+}
+
+.user-name {
+  color: blue;
+}
+
+.postandcomment{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  background-color: chartreuse;
+}
+
+.post-detail{
+  width: 50vw;
+  background-color: cornflowerblue;
+}
+
+.comment{
+  width: 50vw;
+}
